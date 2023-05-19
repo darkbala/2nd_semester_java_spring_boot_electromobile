@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: white;
+}
+body {
+    overflow-x: hidden;
+}
+.newA {
+    width: 80%;
+}
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: whitesmoke;
+    gap: 10px;
+}
+.mainH {
+    color: black;
+    font-size: 35px;
+    margin: 20px 0px;
+}
+.newWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.new {
+    width: 100%;
+    height: 150px;
+    background-color: #0f1d1c;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+.addNew{
+    font-size: 26px;
+    text-decoration: underline;
+    color: #0f1d1c;
+    text-align: center;
+    font-weight: bold;
+}
+.newImg {
+    height: 100%;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 35px 0px 35px 0px;
+}
+.newImg2 {
+    height: 100%;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 0px 35px 0px 35px;
+}
+.newContent {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.newName {
+    font-size: 26px;
+}
+.newDate {
+    text-align: right;
+}
+
+
+
+.addNewsWrapper{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("../public/black.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addNewsBox{
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 15px;
+    background-color: white;
+}
+.addNewsH{
+    font-size: 30px;
+    color: #0f1d1c;
+}
+.addNewsBox > form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

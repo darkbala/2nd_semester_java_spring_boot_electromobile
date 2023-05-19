@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title th:text="${title}"/>
+  <link href="../static/garage.css" th:href="@{/garage.css}" rel="stylesheet"/>
+  <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+  <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+  <link href="../static/carousel.css" th:href="@{/carousel.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+
+<main class="garage">
+  <a href="/garage/create" >Add new car</a>
+  <div class="carStock">
+    <section class="product">
+      <h2 class="carH1">Electrocars in stock</h2>
+      <button class="nxt-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
+      <button class="pre-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
+      <div class="product-container">
+        <a th:href="'/garage/' + ${el.id}" th:each="el:${cars}">
+          <div class="carBox">
+            <div class="carStatus"><p th:text="${el.status}"></p></div>
+            <img th:src="@{/images/carToSell.jpg}" alt="car" class="carImg" />
+            <div class="carDown">
+              <h4 th:text="${el.name}"></h4>
+              <h3 th:text="${el.price}" class="carPrice"> $</h3>
+              <div class="carOption">
+                <div>
+                  <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png"
+                       class="carBat">
+                  <p th:text="${el.batery}"><span class="spanSil">battery</span> kWh</p>
+                </div>
+                <div>
+                  <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                  <p th:text="${el.powerReserve}"><span class="spanSil">power reserve </span>  km</p>
+                </div>
+                <div>
+                  <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png"
+                       class="carBat">
+                  <p th:text="${el.drivePrivod}"><span class="spanSil">drive:</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+  </div>
+  <div class="carStock">
+    <section class="product">
+      <h1 class="carH1">Electrocars to order</h1>
+      <button class="pre-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
+      <button class="nxt-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
+      <div class="product-container" >
+        <a th:href="${el.id}" th:each="el : ${cars}">
+          <div class="carBox">
+            <div class="carStatus"><p th:text="${el.status}"></p></div>
+            <img th:src="@{/images/carToSell.jpg}" alt="car" class="carImg" />
+            <div class="carDown">
+              <h4 th:text="${el.name}"></h4>
+              <h3 th:text="${el.price}" class="carPrice"> $</h3>
+              <div class="carOption">
+                <div>
+                  <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png"
+                       class="carBat">
+                  <p th:text="${el.batery}"><span class="spanSil">battery</span> kWh</p>
+                </div>
+                <div>
+                  <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                  <p th:text="${el.powerReserve}"><span class="spanSil">power reserve </span>  km</p>
+                </div>
+                <div>
+                  <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png"
+                       class="carBat">
+                  <p th:text="${el.drivePrivod}"><span class="spanSil">drive:</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</main>
+
+<div th:insert="blocks/footer::footer"></div>
+<script src="../static/js/carousel.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"/>
+    <link href="../static/home.css" th:href="@{/home.css}" rel="stylesheet"/>
+    <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+    <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+    <link href="../static/carousel.css" th:href="@{/carousel.css}" rel="stylesheet"/>
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+<main id="main">
+    <div class="poster" style="background-image: url(../static/images/taycan.jpg);">
+        <div class="posterContent">
+            <p class="posterH">Find your ideal <span>electrocar</span> vehicle in our garage</p>
+            <div class="posterBox">
+                <p class="posterP">Make your car purchase more confident with a test drive</p>
+                <button type="button" class="posterBtn">Sign up for a test drive</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mission">
+        <h1 class="missionH">What is our mission?</h1>
+        <p class="missionP">Our mission is to make electric transport rarer for everyone, reduce environmental
+            impact and create a
+            greener planet. We looked at a wide range of electric vehicles, electric scooters and electric scooters,
+            as well as modern charging stations for fast and convenient charging. We believe that everyone can
+            expect a comfortable electric ride and envision the world towards a greener future.</p>
+    </div>
+
+    <div class="carStock">
+        <h1 class="carH1">Electrocars in stock</h1>
+        <div class="cars">
+            <a href="#">
+                <div class="carBox">
+                    <div class="carStatus"> in stock</div>
+                    <img src="../static/images/carToSell.jpg" alt="car" class="carImg" />
+                    <div class="carDown">
+                        <h4>Leapmotor C01</h4>
+                        <h3 class="carPrice">45,000 $</h3>
+                        <div class="carOption">
+                            <div>
+                                <img src="../static/images/charging.png"  th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">battery</span> 50 kWh</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">power reserve </span> 500 km</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">drive</span> front, rear, well
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="carBox">
+                    <div class="carStatus"> in stock</div>
+                    <img src="../static/images/ele.jpg" alt="car" class="carImg" />
+                    <div class="carDown">
+                        <h4>Mustang Mach-e</h4>
+                        <h3 class="carPrice">38,000 $</h3>
+                        <div class="carOption">
+                            <div>
+                                <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">battery</span> 50 kWh</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">power reserve</span> 500 km</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">drive</span> front, rear, well
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="carBox">
+                    <div class="carStatus"> in stock</div>
+                    <img src="../static/images/carToSell.jpg" alt="car" class="carImg" />
+                    <div class="carDown">
+                        <h4>Leapmotor C01</h4>
+                        <h3 class="carPrice">45,000 $</h3>
+                        <div class="carOption">
+                            <div>
+                                <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">battery</span> 50 kWh</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">power reserve</span> 500 km</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">drive</span> front, rear, well
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="#">
+                <div class="carBox">
+                    <div class="carStatus"> in stock</div>
+                    <img src="../static/images/ele.jpg" alt="car" class="carImg" />
+                    <div class="carDown">
+                        <h4>Mustang Mach-e</h4>
+                        <h3 class="carPrice">38,000 $</h3>
+                        <div class="carOption">
+                            <div>
+                                <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">battery</span> 50 kWh</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">power reserve </span>500 km</p>
+                            </div>
+                            <div>
+                                <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                                <p><span class="spanSil">drive</span> front, rear, well
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="body2">
+        <svg class="body2Vector" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+             version="1.1" width="1700" height="500" viewBox="-600 0 1700 150" xml:space="preserve">
+                <g transform="matrix(-21.25382 0 0 1.88452625 250 186.0078425834)" id="mfbnxUraSAT63k0_XSV9D">
+                    <path
+                            style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;"
+                            vector-effect="non-scaling-stroke" transform=" translate(-40, -40)"
+                            d="M 0 0 L 80 80 L 0 80 L 0 0 z" stroke-linecap="round" />
+                </g>
+            </svg>
+
+        <div class="functions">
+            <div class="func_items">
+                <div class="func_item_div">
+                    <img src="../static/images/first-place.png" alt="func" class="funcImg">
+                    <h3 class="func_h3">First official company in Kyrgyzstan</h3>
+                </div>
+                <p class="func_p">The very first company in Kyrgyzstan to supply electric vehicles from China</p>
+            </div>
+            <div class="func_items">
+                <div class="func_item_div">
+                    <img src="../static/images/sport-car.png" alt="func" class="funcImg">
+                    <h3 class="func_h3">Delivery of electric vehicles from China</h3>
+                </div>
+                <p class="func_p"> We deliver electric vehicles from China to Belarus and the CIS countries without
+                    intermediaries.</p>
+            </div>
+            <div class="func_items">
+                <div class="func_item_div">
+                    <img src="../static/images/chat.png" alt="func" class="funcImg">
+                    <h3 class="func_h3"> Selection and consultation</h3>
+                </div>
+                <p class="func_p"> Our managers will provide you with high-quality advice and select the necessary
+                    electric car from
+                    China.</p>
+            </div>
+            <div class="func_items">
+                <div class="func_item_div">
+                    <img src="../static/images/plug.png" alt="func" class="funcImg">
+                    <h3 class="func_h3">Accessories/ <br> Chargers</h3>
+                </div>
+                <p class="func_p">You can order adapters for Chinese electric vehicles to Type 1/2 and CHaDEMO from
+                    us.
+                    Various accessories, mats, luggage bags and more.</p>
+            </div>
+        </div>
+
+        <div class="news">
+            <section class="product">
+                <h2 class="product-category">News</h2>
+                <button class="pre-btn"><img alt="arrow" th:height="40px" src="../static/images/arrow.png" th:width="30px"></button>
+                <button class="nxt-btn"><img alt="arrow" th:height="40px" src="../static/images/arrow.png" th:width="30px"></button>
+                <div class="product-container">
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
+                            </div>
+                            <div class="product-info">
+                                <h2 class="product-brand">07 may 2023</h2>
+                                <p class="product-short-description">In China, Tesla lost control and accelerated to
+                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <div class="why">
+            <h2 class="whyH2"> Why choose us?</h2>
+            <div class="whyMain">
+                <div class="whyMainLeft">
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">Full management of the
+                        transaction for the purchase and transportation of electric vehicles from start to finish,
+                        turnkey.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">Consultation on all
+                        issues of interest to you related to electric vehicles / electric cars from China and their
+                        delivery to Kyrgyzstan
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        Search and selection of an electric car in China.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        Inspection and verification of the electric transport that you are going to purchase.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        When choosing a used electric car, the battery is diagnosed. Power reserve check.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        Buying a car from a dealer or from an individual. faces.
+                    </p>
+                </div>
+                <div class="whyMainRight">
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">Full management of the
+                        transaction for the purchase and transportation of electric vehicles from start to finish,
+                        turnkey.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">Consultation on all
+                        issues of interest to you related to electric vehicles / electric cars from China and their
+                        delivery to Kyrgyzstan
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        Search and selection of an electric car in China.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        Inspection and verification of the electric transport that you are going to purchase.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        When choosing a used electric car, the battery is diagnosed. Power reserve check.
+                    </p>
+                    <p class="whyP">
+                        <img src="../static/images/check-mark.png" th:width="30px" th:height="30px" alt="done">
+                        Buying a car from a dealer or from an individual. faces.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+<div th:insert="blocks/footer::footer"></div>
+
+<script src="../static/js/carousel.js"></script>
+</body>
+</html>

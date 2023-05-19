@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title th:text="${title}"/>
+  <link href="../static/bank.css" th:href="@{/bank.css}" rel="stylesheet"/>
+  <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+  <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+<main class="bank" id="app">
+  <div class='lising'>
+    <a href="#">
+      <div class="bankLeasing">
+        <div><img src="../public/village.png" alt="vil" class="aiyl"></div>
+        <div class="bankLeasRight">
+          <h1 class="lisingH">Leasing <img src="../public/leaf.png" alt="leaf" width="40px" height="40px">
+          </h1>
+          <ul>
+            <li>
+              <p>up to <span class="green">5 years</span></p>
+            </li>
+            <li>
+              <p><span class="green">9%</span> per annum in $ USD</p>
+            </li>
+            <li>
+              <p><span class="green">16%</span> per annum in soms</p>
+            </li>
+            <li>
+              <p>down payment <span class=" green">10-30%</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bankLeasing">
+        <div class="bankLeasRight">
+          <h1 class="lisingH">
+            Car loan<img src="../public/leaf.png" alt="leaf" width="40px" height="40px">
+          </h1>
+          <ul>
+            <li>
+              <p>up to <span class="green">1 year</span> - <span class="green">15%</span> per annum
+              </p>
+            </li>
+            <li>
+              <p>up to <span class="green">2 years</span> - <span class="green">18%</span> per annum
+              </p>
+            </li>
+            <li>
+              <p>up to <span class="green">3 years</span> - <span class="green">20%</span> per annum
+              </p>
+            </li>
+            <li>
+              <p>down payment <span class=" green">20%</span></p>
+            </li>
+          </ul>
+        </div>
+        <div><img src="../public/bai.jpg" alt="vil" class="aiyl"></div>
+      </div>
+      <div class="bankLeasing">
+        <div><img src="../public/dcbg.jpg" alt="vil" class="aiyl"></div>
+        <div class="bankLeasRight">
+          <h1 class="lisingH">Car loan <img src="../public/leaf.png" alt="leaf" width="40px" height="40px">
+          </h1>
+          <ul>
+            <li>
+              <p>up to <span class="green">5 years</span></p>
+            </li>
+            <li>
+              <p><span class="green">12%</span> per annum</p>
+            </li>
+            <li>
+              <p>down payment <span class=" green">10%</span></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </a>
+  </div>
+</main>
+
+<div th:insert="blocks/footer::footer"></div>
+</body>
+</html>

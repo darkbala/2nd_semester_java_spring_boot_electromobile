@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title th:text="${title}"/>
+  <link href="../static/about.css" th:href="@{/about.css}" rel="stylesheet"/>
+  <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+  <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+  <main class="about">
+    <div class="aboutCheefs">
+      <div class="cards">
+        <h3 class="cardh3">Leaders</h3>
+        <h1 class="cardh1">Electromobile Company</h1>
+        <div class="card card__one">
+          <div class="card__bg"></div>
+          <img class="card__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_mono.png" />
+          <div class="card__text">
+            <p class="card__title">Asakeeva Bermet <br>
+              <span class="jobPlace">deputy of director</span>
+            </p>
+          </div>
+        </div>
+        <div class="card card__two">
+          <div class="card__bg"></div>
+          <img class="card__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_chihiro.png" />
+          <div class="card__text">
+            <p class="card__title">Samsaev Rustam <br>
+              <span class="jobPlace">director</span>
+            </p>
+          </div>
+        </div>
+        <div class="card card__three">
+          <div class="card__bg"></div>
+          <img class="card__img"
+               src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/62105/3dr_howlcastle.png" />
+          <div class="card__text">
+            <p class="card__title">Danchik Danilbek <br>
+              <span class="jobPlace">designer</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aboutComp">
+      <h1 class="comH1">Our company <span class="jobPlace">"ELECTROMOBILE"</span></h1>
+      <p class="comP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium animi fuga, voluptas
+        odit iusto expedita dolorem debitis deserunt aspernatur accusamus ad exercitationem? Sed a obcaecati
+        corporis. Possimus quos repudiandae sapiente!
+        Odit, maiores alias. Vel repellendus mollitia dolorem aperiam, nam harum reprehenderit quo porro
+        consectetur eum illum nulla ipsum aliquam nihil error nisi. Perferendis saepe laudantium delectus ullam
+        facilis unde iure.
+        Iste, voluptas. Obcaecati, esse officiis dolor quod saepe illo laboriosam aliquam asperiores modi
+        quaerat deserunt, earum natus molestias assumenda autem, aperiam at numquam animi sapiente nihil? Iure
+        tenetur odit reprehenderit?
+        Iure pariatur quae temporibus molestiae eum impedit nulla repudiandae assumenda sit ea quos adipisci
+        perspiciatis esse accusamus ab voluptates porro perferendis eos maxime vel similique libero, corrupti
+        possimus nemo. Doloremque?
+        Illum tempore culpa, amet libero beatae sit quae vero fugiat mollitia minima porro debitis doloremque
+        harum quas nobis, error dolore consequatur possimus, deleniti magni earum reprehenderit modi recusandae
+        nihil! Mollitia?</p>
+    </div>
+    <div class="aboutComp">
+      <h1 class="comH1">Our address and contacts</h1>
+      <div class="adrDiv">
+        <div id="map"></div>
+        <div class="adrContent">
+          <h3 class="contH3">Telephones:</h3>
+          <ul>
+            <li><a href="#">+996 999 960 511 (sales department)</a></li>
+            <li><a href="#">+996 509 960 511 (consultant)</a></li>
+            <li><a href="#">+996 999 999 999 (cooperation)</a></li>
+          </ul>
+          <h3 class="contH3">Auto center(salon):</h3>
+          <ul>
+            <li><a href="#">Kyrgyzstan, Bishkek, Panfilova 38</a></li>
+            <li><a href="#">Kyrgyzstan, Bishkek, Rasakova 32</a></li>
+            <li><a href="#">China, Shanhai, Syao Pin 122/23</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+<div th:insert="blocks/footer::footer"></div>
+<script src="../static/js/about.js"></script>
+</body>
+</html>

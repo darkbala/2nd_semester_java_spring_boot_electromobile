@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"/>
+    <link href="../static/garage.css" th:href="@{/garage.css}" rel="stylesheet"/>
+    <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+    <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+    <link href="../static/carousel.css" th:href="@{/carousel.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+
+<main class="garage">
+            <h2 class="carH1">Electrocar </h2>
+            <div class="product-container" >
+                    <div class="carBox" th:each="el : ${car}">
+                        <div class="carStatus"><p th:text="${el.status.IN_STOCK}"></p></div>
+                        <img th:src="@{/images/carToSell.jpg}" alt="car" class="carImg" />
+                        <div class="carDown">
+                            <h4 th:text="${el.name}"></h4>
+                            <h3 th:text="${el.price}" class="carPrice"> $</h3>
+                            <div class="carOption">
+                                <div>
+                                    <img th:src="@{../static/images/charging.png}" width="20px" height="20px" alt="png"
+                                         class="carBat">
+                                    <p th:text="${el.batery}"><span class="spanSil">battery</span> kWh</p>
+                                </div>
+                                <div>
+                                    <img th:src="@{../static/images/road.png}" width="20px" height="20px" alt="png" class="carBat">
+                                    <p th:text="${el.powerReserve}"><span class="spanSil">power reserve </span>  km</p>
+                                </div>
+                                <div>
+                                    <img th:src="@{../static/images/chassis.png}" width="20px" height="20px" alt="png"
+                                         class="carBat">
+                                    <p th:text="${el.drivePrivod}"><span class="spanSil">drive:</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <form th:action="'/garage/delete/'+ ${el.id}" method="post">
+                                <button type="submit" >DELETE</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+</main>
+
+<div th:insert="blocks/footer::footer"></div>
+<script src="../static/js/carousel.js"></script>
+</body>
+</html>

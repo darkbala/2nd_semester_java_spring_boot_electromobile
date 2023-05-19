@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>NEWS</title>
+    <link href="../static/news.css" th:href="@{/news.css}" rel="stylesheet"/>
+    <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+    <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+    <link href="../static/news.css" th:href="@{/news.css}" rel="stylesheet"/>
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+<main class="main">
+    <a href="/news/add" class="addNew">Add news</a>
+    <h1 class="mainH">Here are all the latest <span class="green">NEWS</span></h1>
+    <div th:each="el : ${news}" class="newWrap">
+        <a href="#" th:href="'/news/' + ${el.id}" class="newA">
+            <div class="new">
+                <img src="../static/images/ele.jpg" alt="newsImg" class="newImg">
+                <div class="newContent">
+                    <h1 class="newName" th:text="${el.title}"></h1>
+                    <p class="newDesc" th:text="${el.anons}"></p>
+                    <p class="newDate" th:text="${#dates.format(el.date, 'dd.MM.yyyy HH:mm')}"></p>
+                </div>
+                <img src="../static/images/carToSell.jpg" alt="newsImg" class="newImg2">
+            </div>
+        </a>
+    </div>
+</main>
+<div th:insert="blocks/footer::footer"></div>
+</body>
+</html>

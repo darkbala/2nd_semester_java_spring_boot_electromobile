@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"/>
+    <link href="../static/garage.css" th:href="@{/garage.css}" rel="stylesheet"/>
+    <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+    <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+    <link href="../static/carousel.css" th:href="@{/carousel.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+
+<main class="garage">
+    <form action="/garage/create" method="post">
+        <input type="text" name="name">
+        <input type="text" name="price">
+        <input type="text" name="powerReserve">
+        <input type="text" name="batery">
+        <input type="text" name="drivePrivod">
+        <input type="text" name="typeCarcas">
+        <select name="status" >
+            <option value="IN_STOCK">in STOCK</option>
+            <option value="TO_ORDER">to ORDER</option>
+        </select>
+        <textarea name="description"></textarea>
+        <button type="submit">ADD</button>
+    </form>
+</main>
+
+<div th:insert="blocks/footer::footer"></div>
+<script src="../static/js/carousel.js"></script>
+</body>
+</html>
