@@ -15,7 +15,7 @@
     <div class="addNewsBox" >
         <h1 class="addNewsH">Edit NEWS</h1>
         <div th:each="el: ${news}">
-            <form method="post">
+            <form action="/news/edit/{el.id}" method="post">
                     <input type="text" name="title" th:value="${el.title}" placeholder="Enter title of news" >
                     <input type="text" name="anons" th:value="${el.anons}" placeholder="Enter anons of news" >
                     <textarea  name="full_text" th:text="${el.full_text}" placeholder="Enter full text of news" ></textarea>

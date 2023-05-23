@@ -17,7 +17,7 @@
         <div class="newContent">
           <h1 class="newName" th:text="${news.title}"></h1>
           <p class="newDesc" th:text="${news.full_text}"></p>
-          <a th:href="'/news/' + ${news.id} + '/edit'">Edit</a>
+          <a th:href="'/news/edit/' + ${news.id} ">Edit</a>
           <form th:action="'/news/remove/' + ${news.id}" method="post">
             <button type="submit" >Delete</button>
           </form>

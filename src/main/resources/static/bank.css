@@ -14,7 +14,7 @@ body {
 .bank {
     width: 100%;
     min-height: 100vh;
-    background-image: url(../public/black.jpg);
+    background-image: url("https://images3.alphacoders.com/210/210105.jpg");
     background-size: 100% 100%;
     display: flex;
     flex-direction: column;

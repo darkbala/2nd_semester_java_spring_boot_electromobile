@@ -24,21 +24,21 @@ public class NewService {
         return news;
     }
 
-    public void saveNew(NewsModel neww, MultipartFile file1, MultipartFile file2)throws IOException {
-        ImageModel image1;
-        ImageModel image2;
-        if (file1.getSize() != 0){
-            image1 = toImageEntity(file1);
+    public void saveNew(NewsModel neww, MultipartFile file1)throws IOException {
+
+        if (!file1.isEmpty()) {
+            ImageModel image1 = toImageEntity(file1);
             image1.setPreviewImage(true);
             neww.addImageToNews(image1);
         }
-        if (file2.getSize() != 0){
-            image2 = toImageEntity(file1);
-            neww.addImageToNews(image2);
-        }
+
         log.info("Saving new {}", neww);
         NewsModel newFromDB = newRepo.save(neww);
-        newFromDB.setPreviewImageId(newFromDB.getImages().get(0).getId());
+
+        if (newFromDB.getImages().size() > 0) {
+            ImageModel previewImage = newFromDB.getImages().get(0);
+            newFromDB.setPreviewImageId(previewImage.getId());
+        }
         newRepo.save(neww);
     }
 
