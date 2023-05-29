@@ -14,7 +14,7 @@
     <a href="/news/add" class="addNew">Add news</a>
     <h1 class="mainH">Here are all the latest <span class="green">NEWS</span></h1>
     <div th:each="el : ${news}" class="newWrap">
-        <a href="#" th:href="'/news/' + ${el.id}" class="newA">
+        <a  th:href="'/news/' + ${el.id}" class="newA">
             <div class="new">
                 <img th:src="@{'/images/' + ${el.previewImageId}}" alt="newsImg" class="newImg">
                 <div class="newContent">

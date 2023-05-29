@@ -16,7 +16,9 @@
             <p class="posterH">Find your ideal <span>electrocar</span> vehicle in our garage</p>
             <div class="posterBox">
                 <p class="posterP">Make your car purchase more confident with a test drive</p>
+                <a href="/test">
                 <button type="button" class="posterBtn">Sign up for a test drive</button>
+                </a>
             </div>
         </div>
     </div>
@@ -31,108 +33,33 @@
     </div>
 
     <div class="carStock">
-        <h1 class="carH1">Electrocars in stock</h1>
+        <h1 class="carH1">Electrocars</h1>
         <div class="cars">
-            <a href="#">
+            <a th:href="'/garage/' + ${el.id}" th:each="el : ${cars}">
                 <div class="carBox">
                     <div class="carStatus"> in stock</div>
-                    <img src="../static/images/carToSell.jpg" alt="car" class="carImg" />
+                    <img th:src="@{'/images/' + ${el.previewImageId}}" alt="car" class="carImg" />
                     <div class="carDown">
-                        <h4>Leapmotor C01</h4>
-                        <h3 class="carPrice">45,000 $</h3>
+                        <h4 th:text="${el.name}"></h4>
+                        <h3 th:text="${el.price}" class="carPrice"></h3>
                         <div class="carOption">
                             <div>
                                 <img src="https://cdn-icons-png.flaticon.com/128/9473/9473021.png"  th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">battery</span> 50 kWh</p>
+                                <p th:text="${el.batery}"><span class="spanSil">battery</span></p>
                             </div>
                             <div>
                                 <img src="https://cdn-icons-png.flaticon.com/128/3393/3393779.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">power reserve </span> 500 km</p>
+                                <p th:text="${el.powerReserve}"><span class="spanSil">power reserve </span> </p>
                             </div>
                             <div>
                                 <img src="https://cdn-icons-png.flaticon.com/128/2724/2724363.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">drive</span> front, rear, well
-                                </p>
+                                <p th:text="${el.drivePrivod}"><span class="spanSil">drive</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="#">
-                <div class="carBox">
-                    <div class="carStatus"> in stock</div>
-                    <img src="../static/images/ele.jpg" alt="car" class="carImg" />
-                    <div class="carDown">
-                        <h4>Mustang Mach-e</h4>
-                        <h3 class="carPrice">38,000 $</h3>
-                        <div class="carOption">
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/9473/9473021.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">battery</span> 50 kWh</p>
-                            </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/3393/3393779.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">power reserve</span> 500 km</p>
-                            </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/2724/2724363.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">drive</span> front, rear, well
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="carBox">
-                    <div class="carStatus"> in stock</div>
-                    <img src="../static/images/carToSell.jpg" alt="car" class="carImg" />
-                    <div class="carDown">
-                        <h4>Leapmotor C01</h4>
-                        <h3 class="carPrice">45,000 $</h3>
-                        <div class="carOption">
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/9473/9473021.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">battery</span> 50 kWh</p>
-                            </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/3393/3393779.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">power reserve</span> 500 km</p>
-                            </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/2724/2724363.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">drive</span> front, rear, well
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="carBox">
-                    <div class="carStatus"> in stock</div>
-                    <img src="../static/images/ele.jpg" alt="car" class="carImg" />
-                    <div class="carDown">
-                        <h4>Mustang Mach-e</h4>
-                        <h3 class="carPrice">38,000 $</h3>
-                        <div class="carOption">
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/9473/9473021.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">battery</span> 50 kWh</p>
-                            </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/3393/3393779.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">power reserve </span>500 km</p>
-                            </div>
-                            <div>
-                                <img src="https://cdn-icons-png.flaticon.com/128/2724/2724363.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                                <p><span class="spanSil">drive</span> front, rear, well
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </a>
+
         </div>
     </div>
     <div class="body2">
@@ -185,135 +112,17 @@
         <div class="news">
             <section class="product">
                 <h2 class="product-category">News</h2>
-                <button class="pre-btn"><img alt="arrow" th:height="40px" src="../static/images/arrow.png" th:width="30px"></button>
-                <button class="nxt-btn"><img alt="arrow" th:height="40px" src="../static/images/arrow.png" th:width="30px"></button>
+                <button class="pre-btn"><img alt="arrow" th:height="40px" src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" th:width="30px"></button>
+                <button class="nxt-btn"><img alt="arrow" th:height="40px" src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" th:width="30px"></button>
                 <div class="product-container">
-                    <a href="#">
+                    <a th:href="'/news/'+ ${el.id}" th:each="el : ${news}">
                         <div class="product-card">
                             <div class="product-image">
-                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
+                                <img th:src="@{'/images/' + ${el.previewImageId}}" class="product-thumb" alt="">
                             </div>
                             <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/ele.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="product-card">
-                            <div class="product-image">
-                                <img src="../static/images/carToSell.jpg" class="product-thumb" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h2 class="product-brand">07 may 2023</h2>
-                                <p class="product-short-description">In China, Tesla lost control and accelerated to
-                                    maximum speed, the manufacturer and the authorities launched an investigation
+                                <h2 class="product-brand" th:text="${#dates.format(el.date, 'dd.MM.yyyy HH:mm')}"></h2>
+                                <p class="product-short-description" th:text="${el.anons}">
                                 </p>
                             </div>
                         </div>
@@ -388,6 +197,6 @@
 </main>
 <div th:insert="blocks/footer::footer"></div>
 
-<script src="../static/js/carousel.js"></script>
+<script th:type="text/javascript" th:src="@{../static/js/carousel.js}" src="../static/js/carousel.js"></script>
 </body>
 </html>

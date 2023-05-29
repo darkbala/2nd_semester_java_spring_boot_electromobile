@@ -12,18 +12,19 @@
 <div th:insert="blocks/header::header"></div>
 <main class="main">
   <div  class="newWrap">
-      <div class="new" th:each="image : ${images}">
-        <img th:src="@{'/images/' + ${image.id}}"  alt="newsImg" class="newImg">
-        <div class="newContent">
-          <h1 class="newName" th:text="${news.title}"></h1>
+      <div class="newMore" th:each="image : ${images}">
+        <a class="backBtn" href="/news"><span>&#8592;</span> Back</a>
+        <img th:src="@{'/images/' + ${image.id}}"  alt="newsImg" class="newImgMore">
+        <div class="newContentMore">
+          <h1 class="newNameMore" th:text="${news.title}"></h1>
           <p class="newDesc" th:text="${news.full_text}"></p>
-          <a th:href="'/news/edit/' + ${news.id} ">Edit</a>
-          <form th:action="'/news/remove/' + ${news.id}" method="post">
-            <button type="submit" >Delete</button>
-          </form>
+
           <p class="newDate" th:text="${#dates.format(news.date, 'dd.MM.yyyy HH:mm')}"></p>
+          <form th:action="'/news/remove/' + ${news.id}" method="post">
+            <button class="deleteBtn" type="submit" >Delete</button>
+          </form>
         </div>
-        <img th:src="@{'/images/' + ${image.id}}"  alt="newsImg" class="newImg2">
+        <img th:src="@{'/images/' + ${image.id}}"  alt="newsImg" class="newImg2More">
       </div>
   </div>
 </main>

@@ -12,24 +12,24 @@
 <body>
 <div th:insert="blocks/header::header"></div>
 
-<main class="garage">
-    <form action="/garage/create" method="post">
-        <input type="text" name="name">
-        <input type="text" name="price">
-        <input type="text" name="powerReserve">
-        <input type="text" name="batery">
-        <input type="text" name="drivePrivod">
-        <input type="text" name="typeCarcas">
+<main class="garageCar">
+    <form action="/garage/create" method="post" enctype="multipart/form-data">
+        <input placeholder="Enter name car" class="carInp" type="text" name="name">
+        <input placeholder="Enter price car" class="carInp" type="text" name="price">
+        <input placeholder="Enter power reserve" class="carInp" type="text" name="powerReserve">
+        <input placeholder="Enter batery power" class="carInp" type="text" name="batery">
+        <input placeholder="Enter a drive" class="carInp" type="text" name="drivePrivod">
+        <input placeholder="Enter type of carcas" class="carInp" type="text" name="typeCarcas">
         <select name="status" >
             <option value="IN_STOCK">in STOCK</option>
             <option value="TO_ORDER">to ORDER</option>
         </select>
-        <textarea name="description"></textarea>
-        <button type="submit">ADD</button>
+        <textarea class="carArea" name="description"></textarea>
+        <input type="file" name="file1" id="file1">
+        <button class="carBtn" type="submit">ADD</button>
     </form>
 </main>
 
 <div th:insert="blocks/footer::footer"></div>
-<script src="../static/js/carousel.js"></script>
 </body>
 </html>

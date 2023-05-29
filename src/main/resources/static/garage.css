@@ -18,6 +18,9 @@ body {
     display: flex;
     flex-direction: column;
     background-color: whitesmoke;
+    background-image: url("https://images5.alphacoders.com/316/316914.jpg");
+    background-size: 100% 100vh;
+    background-repeat: repeat-y;
 }
 
 .carStock {
@@ -87,4 +90,64 @@ body {
     color: silver;
     letter-spacing: 0px;
     font-size: 15px;
+}
+
+.carInp{
+    width: 300px;
+    padding: 10px;
+    font-size: 18px;
+    color: black;
+}
+.garageCar{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.garageCar > form{
+    border-radius: 20px;
+    background-color: #0f1d1c;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 40px;
+    color :black;
+}
+.carBtn{
+    width: 100px;
+    padding: 10px;
+    background: white;
+    font-size: 18px;
+    color: black;
+}
+.addcarH{
+    text-align: center;
+    font-size: 30px;
+    color: #0f1d1c;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+.carArea{
+    min-height: 100px;
+    color: black;
+}
+
+.garageMore{
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carBoxMore{
+    background-color: #0f1d1c;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }

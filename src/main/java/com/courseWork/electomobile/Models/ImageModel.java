@@ -25,5 +25,7 @@ public class ImageModel {
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     private NewsModel news;
 
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    private CarModel cars;
 
 }

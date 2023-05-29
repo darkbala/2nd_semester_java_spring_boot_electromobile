@@ -1,7 +1,6 @@
 package com.courseWork.electomobile.Controllers;
 
 import com.courseWork.electomobile.Models.NewsModel;
-import com.courseWork.electomobile.Repo.ImageRepo;
 import com.courseWork.electomobile.Services.NewService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -20,9 +19,6 @@ import java.util.Date;
 public class NewsController {
 
     private final NewService newService;
-    private final ImageRepo imageRepo;
-
-
 
     @GetMapping("/news")
     public String newsView(Model model) {

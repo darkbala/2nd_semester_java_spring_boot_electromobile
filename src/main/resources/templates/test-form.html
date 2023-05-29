@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${title}"/>
+    <link href="../static/test.css" th:href="@{/test.css}" rel="stylesheet"/>
+    <link href="../static/header.css" th:href="@{/header.css}" rel="stylesheet"/>
+    <link href="../static/footer.css" th:href="@{/footer.css}" rel="stylesheet"/>
+
+</head>
+<body>
+<div th:insert="blocks/header::header"></div>
+
+<main class="test">
+    <form class="form" action="/test" method="post" th:object="${testDriveForm}">
+        <label class="lbaleTest" for="firstName">First Name:</label>
+        <input class="inp" type="text" id="firstName" name="firstName" required><br><br>
+
+        <label class="lbaleTest" for="lastName">Last Name:</label>
+        <input class="inp" type="text" id="lastName" name="lastName" required><br><br>
+
+        <label class="lbaleTest" for="phoneNumber">Phone Number:</label>
+        <input class="inp" type="tel" id="phoneNumber" name="phoneNumber" required><br><br>
+
+        <button class="testBtn" type="submit">Submit</button>
+    </form>
+</main>
+
+<div th:insert="blocks/footer::footer"></div>
+</body>
+</html>

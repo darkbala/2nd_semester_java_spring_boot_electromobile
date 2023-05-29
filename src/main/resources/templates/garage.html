@@ -13,32 +13,32 @@
 <div th:insert="blocks/header::header"></div>
 
 <main class="garage">
-  <a href="/garage/create" >Add new car</a>
+  <a href="/garage/create" class="addcarH">Add new car</a>
   <div class="carStock">
     <section class="product">
-      <h2 class="carH1">Electrocars in stock</h2>
-      <button class="nxt-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
-      <button class="pre-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
-      <div class="product-container">
+      <h2 class="carH1">Electrocars</h2>
+      <button class="nxt-btn"><img src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" alt="arrow" th:width="30px" th:height="40px"></button>
+      <button class="pre-btn"><img src="https://cdn-icons-png.flaticon.com/128/1549/1549454.png" alt="arrow" th:width="30px" th:height="40px"></button>
+      <div class="product-container ">
         <a th:href="'/garage/' + ${el.id}" th:each="el:${cars}">
           <div class="carBox">
             <div class="carStatus"><p th:text="${el.status}"></p></div>
-            <img th:src="@{/images/carToSell.jpg}" alt="car" class="carImg" />
+            <img th:src="@{'/images/' + ${el.previewImageId}}" alt="car" class="carImg" />
             <div class="carDown">
               <h4 th:text="${el.name}"></h4>
               <h3 th:text="${el.price}" class="carPrice"> $</h3>
               <div class="carOption">
                 <div>
-                  <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png"
+                  <img src="https://cdn-icons-png.flaticon.com/128/9473/9473021.png" th:width="20px" th:height="20px" alt="png"
                        class="carBat">
                   <p th:text="${el.batery}"><span class="spanSil">battery</span> kWh</p>
                 </div>
                 <div>
-                  <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
+                  <img src="https://cdn-icons-png.flaticon.com/128/3393/3393779.png" th:width="20px" th:height="20px" alt="png" class="carBat">
                   <p th:text="${el.powerReserve}"><span class="spanSil">power reserve </span>  km</p>
                 </div>
                 <div>
-                  <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png"
+                  <img src="https://cdn-icons-png.flaticon.com/128/2724/2724363.png" th:width="20px" th:height="20px" alt="png"
                        class="carBat">
                   <p th:text="${el.drivePrivod}"><span class="spanSil">drive:</span>
                   </p>
@@ -51,42 +51,6 @@
       </div>
     </section>
 
-  </div>
-  <div class="carStock">
-    <section class="product">
-      <h1 class="carH1">Electrocars to order</h1>
-      <button class="pre-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
-      <button class="nxt-btn"><img src="../static/images/arrow.png" alt="arrow" th:width="30px" th:height="40px"></button>
-      <div class="product-container" >
-        <a th:href="${el.id}" th:each="el : ${cars}">
-          <div class="carBox">
-            <div class="carStatus"><p th:text="${el.status}"></p></div>
-            <img th:src="@{/images/carToSell.jpg}" alt="car" class="carImg" />
-            <div class="carDown">
-              <h4 th:text="${el.name}"></h4>
-              <h3 th:text="${el.price}" class="carPrice"> $</h3>
-              <div class="carOption">
-                <div>
-                  <img src="../static/images/charging.png" th:width="20px" th:height="20px" alt="png"
-                       class="carBat">
-                  <p th:text="${el.batery}"><span class="spanSil">battery</span> kWh</p>
-                </div>
-                <div>
-                  <img src="../static/images/road.png" th:width="20px" th:height="20px" alt="png" class="carBat">
-                  <p th:text="${el.powerReserve}"><span class="spanSil">power reserve </span>  km</p>
-                </div>
-                <div>
-                  <img src="../static/images/chassis.png" th:width="20px" th:height="20px" alt="png"
-                       class="carBat">
-                  <p th:text="${el.drivePrivod}"><span class="spanSil">drive:</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </section>
   </div>
 </main>
 
